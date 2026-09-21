@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function navbar() {
   return (
+
     <Navbar expand="lg" bg="light" className="mb-3">
       <Container>
         <Navbar.Brand href="#home">Ibrahim</Navbar.Brand>
