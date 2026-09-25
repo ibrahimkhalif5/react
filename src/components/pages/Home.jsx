@@ -13,7 +13,7 @@ const homeCards = [
   {
     title: 'Experience',
     path: '/experience',
-    blurb: 'Production software that runs real organizations — revenue systems, government platforms, and more.',
+    blurb: 'Production software that runs real organizations: revenue systems, government platforms, and more.',
   },
   {
     title: 'Education',
@@ -28,7 +28,7 @@ const homeCards = [
   {
     title: 'Services',
     path: '/services',
-    blurb: 'What I can deliver — web development, software, APIs, databases, and more.',
+    blurb: 'What I can deliver: web development, software, APIs, databases, and more.',
   },
   {
     title: 'Projects',
@@ -38,7 +38,7 @@ const homeCards = [
   {
     title: "What I'm Exploring",
     path: '/exploring',
-    blurb: 'Where my focus is right now — AI, modern software engineering, and backend engineering.',
+    blurb: 'Where my focus is right now: AI, modern software engineering, and backend engineering.',
   },
 ]
 
@@ -71,7 +71,7 @@ function Home() {
                   View My Work
                 </Link>
                 <Link to="/resume" className="btn btn-outline-light btn-lg">
-                  View Résumé
+                  View Resume
                 </Link>
               </div>
             </Col>

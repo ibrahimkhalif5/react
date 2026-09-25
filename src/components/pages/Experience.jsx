@@ -8,29 +8,36 @@ function Experience() {
       <Container>
         <PageHeader title="Experience" intro={experience.intro} />
 
-        <Card className="portfolio-card">
-          <Card.Body className="p-lg-4">
-            <h2 className="h4 mb-1">{experience.role}</h2>
-            <p className="portfolio-organization mb-4">
-              {experience.organization}
-              <span className="text-secondary"> , {experience.department}</span>
-            </p>
+        {experience.roles.map((role) => (
+          <Card className="portfolio-card mb-4" key={role.title}>
+            <Card.Body className="p-lg-4">
+              <div className="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                <div>
+                  <h2 className="h4 mb-1">{role.title}</h2>
+                  <p className="portfolio-organization mb-0">
+                    {role.organization}
+                    <span className="text-secondary"> , {role.location}</span>
+                  </p>
+                </div>
+                <span className="portfolio-period">{role.period}</span>
+              </div>
 
-            <ul className="portfolio-bullets mb-4">
-              {experience.bullets.map((bullet, index) => (
-                <li key={index}>{bullet}</li>
-              ))}
-            </ul>
+              <ul className="portfolio-bullets">
+                {role.bullets.map((bullet, index) => (
+                  <li key={index}>{bullet}</li>
+                ))}
+              </ul>
+            </Card.Body>
+          </Card>
+        ))}
 
-            <div className="d-flex flex-wrap gap-2">
-              {experience.technologies.map((tech) => (
-                <span className="portfolio-badge" key={tech}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </Card.Body>
-        </Card>
+        <div className="d-flex flex-wrap gap-2 mt-4">
+          {experience.technologies.map((tech) => (
+            <span className="portfolio-badge" key={tech}>
+              {tech}
+            </span>
+          ))}
+        </div>
       </Container>
     </section>
   )

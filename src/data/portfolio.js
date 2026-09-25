@@ -16,6 +16,7 @@ export const site = {
   email: 'ibrahimkhalif5@gmail.com',
   github: 'https://github.com/ibrahimkhalif5',
   linkedin: 'https://www.linkedin.com/in/ibrahim-khalif-367140161',
+  website: 'https://ibrahimkhalif5.github.io/ibrahim-khalif-portfolio/',
   resume: '/Ibrahim-Khalif-Ali-Resume.pdf',
 }
 
@@ -28,8 +29,8 @@ export const quickFacts = [
     text: 'Revenue, healthcare, land registry, municipal',
   },
   {
-    title: 'Software Engineering with AI',
-    text: 'Centennial College, Canada',
+    title: 'Software Engineering Technology',
+    text: 'AI stream, Centennial College, Canada',
   },
   {
     title: 'Based in Toronto',
@@ -38,14 +39,14 @@ export const quickFacts = [
 ]
 
 export const heroIntro =
-  "I've spent my career designing, building, and supporting software systems that run real organizations — county revenue platforms, hospital systems, land registries, and government web platforms. Now I'm deepening that foundation into modern software engineering and AI."
+  "I've spent my career designing, building, and supporting software systems that run real organizations, including county revenue platforms, hospital systems, land registries, and government web platforms. Now I'm deepening that foundation into modern software engineering and AI."
 
 // About Me page
 export const aboutParagraphs = [
-  "I'm an ICT professional and software developer based in Toronto, currently studying Software Engineering with AI at Centennial College. I design, develop, deploy, and support software systems, mostly backend heavy web applications that need to work reliably in production.",
-  'Most of my work has been in the public and institutional space: government technology systems, revenue platforms, land registry tools, healthcare systems, and municipal websites. These are environments where the software has to handle real data, real users, and real consequences. That\'s where I learned to build things properly — not just get them running, but keep them running.',
-  'Over the past few years, my focus has shifted from maintaining existing systems toward building new ones with modern tools and practices. I work extensively with Laravel, Vue.js, PHP, Python, and MySQL, and I\'ve been deepening my understanding of software architecture, API design, and cloud deployment. More recently, I\'ve been exploring how artificial intelligence can be integrated into practical applications — not as a buzzword, but as a genuine tool for solving problems.',
-  "I'm drawn to software engineering because it rewards both discipline and curiosity. I want to build systems that are well designed, maintainable, and actually useful — the kind of software that makes an organization run better, not just look modern.",
+  "I'm an ICT professional and software developer based in Toronto, currently studying Software Engineering Technology (Artificial Intelligence) at Centennial College. I design, develop, deploy, and support software systems, mostly backend heavy web applications that need to work reliably in production.",
+  'Most of my work has been in the public and institutional space: government technology systems, revenue platforms, land registry tools, healthcare systems, and municipal websites. These are environments where the software has to handle real data, real users, and real consequences. That\'s where I learned to build things properly, not just get them running but keep them running.',
+  'Over the past few years, my focus has shifted from maintaining existing systems toward building new ones with modern tools and practices. I work extensively with Laravel, Vue.js, PHP, Python, and MySQL, and I\'ve been deepening my understanding of software architecture, API design, and cloud deployment. More recently, I\'ve been exploring how artificial intelligence can be integrated into practical applications, not as a buzzword but as a genuine tool for solving problems.',
+  "I'm drawn to software engineering because it rewards both discipline and curiosity. I want to build systems that are well designed, maintainable, and actually useful, the kind of software that makes an organization run better, not just look modern.",
 ]
 
 export const openTo = [
@@ -59,12 +60,12 @@ export const openTo = [
 export const currently = [
   {
     label: 'Studying',
-    title: 'Software Engineering with AI',
+    title: 'Software Engineering Technology - AI',
     place: 'Centennial College, Canada',
   },
   {
     label: 'Also completing',
-    title: 'Master of Information Technology',
+    title: 'Master of Science in Information Technology',
     place: 'INTI International University, Malaysia',
   },
 ]
@@ -72,9 +73,11 @@ export const currently = [
 export const interests = [
   'Software Engineering',
   'Artificial Intelligence',
+  'Machine Learning',
   'Full Stack Development',
   'Backend APIs',
   'Database Architecture',
+  'Flutter Development',
   'Cloud Deployment',
 ]
 
@@ -114,21 +117,33 @@ export const services = [
   },
 ]
 
-// Experience
+// Experience. Two roles covering 6 years, from the current résumé.
 export const experience = {
   intro:
-    'Production software that runs real organizations. My experience spans the design, development, and operation of systems relied on daily by public institutions, where correctness, reliability, and security are non negotiable.',
-  role: 'Chief ICT Officer',
-  organization: 'Mandera County Government',
-  department: 'Department of Revenue Services',
-  bullets: [
-    'Managed and supported county wide ICT systems, ensuring reliability across revenue collection, land registry, and municipal operations',
-    'Designed and developed revenue management systems using Laravel and Vue.js to streamline tax collection and reporting',
-    'Deployed and configured POS terminals for revenue collection points, integrating M-Pesa and USSD payment channels',
-    'Administered databases and applications, managing MySQL instances serving government operations',
-    'Built and maintained government web platforms for internal operations and public facing services',
-    'Provided technical support, user training, and troubleshooting for county staff across departments',
-    'Integrated third party payment systems and REST APIs to connect revenue operations with financial infrastructure',
+    "6 years of experience spanning public sector systems administration and custom web application delivery. I design, develop, and operate systems that public institutions rely on daily, where correctness, reliability, and security come first.",
+  roles: [
+    {
+      title: 'County Revenue & Land Registry System Administrator',
+      organization: 'Mandera County Government',
+      location: 'Mandera, Kenya',
+      period: 'Oct 2020 - Aug 2026',
+      bullets: [
+        'Trained system users and configured POS machines',
+        'Managed, deployed, and configured handheld Android POS hardware networks and transactional revenue databases',
+        'Spearheaded implementation audits for the Revenue Collection Management System (RCMS), drastically reducing data discrepancies and safeguarding financial audit tracking',
+        'Maintained user access controls, secure schema migrations, and optimized raw MySQL data queries for regional public infrastructure routing',
+      ],
+    },
+    {
+      title: 'Freelance / Side Projects',
+      organization: 'County Government of Mandera',
+      location: 'Remote',
+      period: 'Mar 2019 - Jun 2026',
+      bullets: [
+        'Built and structured an accessible, multi-tier public portal optimized for high up-time and community information requests, using Laravel and responsive Bootstrap layouts',
+        'Engineered a dynamic database-driven resource index website powered by Laravel and MySQL to streamline official publication access, committee reports, and tender postings',
+      ],
+    },
   ],
   technologies: [
     'Laravel',
@@ -145,26 +160,31 @@ export const experience = {
 // Education
 export const education = [
   {
-    degree: 'Software Engineering with AI',
+    degree: 'Software Engineering Technology - Artificial Intelligence',
     school: 'Centennial College',
-    location: 'Toronto, Canada',
+    location: 'Toronto, Ontario, Canada',
+    period: 'Sep 2026 - Apr 2028',
     badge: 'Current student',
     description:
-      'Studying software engineering principles, artificial intelligence, and modern development practices.',
+      'Coursework covers mobile UX/UI design, app integration, performance optimization, machine learning, object-oriented software design (Java), NLP workflows, image recognition modules, and building automated software bots.',
   },
   {
-    degree: 'Master of Information Technology',
+    degree: 'Master of Science in Information Technology',
     school: 'INTI International University',
-    location: 'Malaysia',
+    location: 'Malaysia (Online Learning)',
+    period: 'Mar 2025 - Oct 2026',
     badge: 'Currently completing final semester',
-    description: 'Completing final semester through online learning.',
+    description:
+      'Coursework covers advanced enterprise software architecture, business intelligence and data analytics, architecting scalable cloud infrastructure, and managing end-to-end software delivery workflows.',
   },
   {
     degree: 'Bachelor of Science in Information Technology',
     school: "Murang'a University of Technology",
-    location: 'Kenya',
+    location: "Murang'a, Kenya",
+    period: 'Sep 2014 - Aug 2018',
     badge: '2018',
-    description: '',
+    description:
+      'Graduated with a GPA of 3.471. Covered systems analysis and architecture, object-oriented programming (Java/C++), advanced relational databases (MySQL), discrete mathematics and statistical calculus, network infrastructure design, and theoretical computer science.',
   },
 ]
 

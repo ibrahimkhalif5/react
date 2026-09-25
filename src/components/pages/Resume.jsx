@@ -15,6 +15,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = workerUrl
 function Resume() {
   // Scale the PDF with the screen so it fits nicely on any device.
   const [scale, setScale] = useState(1.4)
+  const [numPages, setNumPages] = useState(0)
   const [loadError, setLoadError] = useState(false)
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function Resume() {
       <Container>
         <Row className="align-items-start justify-content-between g-3 mb-4">
           <Col xs="auto">
-            <PageHeader title="Résumé" />
+            <PageHeader title="Resume" />
           </Col>
           <Col xs="auto">
             <Link to="/" className="btn btn-outline-light">
@@ -60,9 +61,12 @@ function Resume() {
             <Document
               file={site.resume}
               className="resume-document"
+              onLoadSuccess={({ numPages: pages }) => setNumPages(pages)}
               onLoadError={() => setLoadError(true)}
             >
-              <Page pageNumber={1} scale={scale} />
+              {Array.from({ length: numPages }, (_, index) => (
+                <Page key={`page-${index + 1}`} pageNumber={index + 1} scale={scale} />
+              ))}
             </Document>
           )}
         </Row>

@@ -32,7 +32,40 @@ body {
 /* ---------- Navbar ---------- */
 
 .portfolio-navbar {
-  background-color: var(--dark-bg);
+  background: rgba(8, 12, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-navbar .navbar-brand {
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+.portfolio-navbar .navbar-brand:hover {
+  color: #fff;
+}
+
+.portfolio-nav-link.nav-link {
+  color: #c4d0e3;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.portfolio-nav-link.nav-link:hover {
+  color: #ffffff;
+}
+
+.portfolio-nav-link.nav-link.active {
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 600;
 }
 
 .portfolio-logo {
@@ -211,7 +244,8 @@ body {
   color: var(--accent);
 }
 
-.service-icon-wrapper {
+.service-icon-wrapper,
+.education-icon-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -280,6 +314,13 @@ body {
 .portfolio-organization {
   color: var(--accent);
   font-size: 0.9rem;
+}
+
+.portfolio-period {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 /* ---------- Resume ---------- */

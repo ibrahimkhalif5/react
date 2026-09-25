@@ -20,7 +20,7 @@ function Navbar() {
     <BootstrapNavbar expand="xl" bg="dark" variant="dark" sticky="top" className="portfolio-navbar">
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2">
-          <img src="/ib.png" alt={site.name} className="portfolio-logo" />
+          <img src="/ibrahim.png" alt={site.name} className="portfolio-logo" />
           <span>{site.name}</span>
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="main-nav" />

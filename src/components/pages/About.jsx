@@ -35,7 +35,7 @@ function About() {
               <h2 className="h4 mb-1">{site.fullName}</h2>
               <p className="text-secondary mb-3">{site.role}</p>
               <Link to="/resume" className="btn btn-primary">
-                View Résumé
+                View Resume
               </Link>
             </div>
 

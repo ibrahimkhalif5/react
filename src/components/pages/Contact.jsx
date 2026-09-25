@@ -8,6 +8,7 @@ const contactDetails = [
   { label: 'Email', value: site.email, url: `mailto:${site.email}`, external: false },
   { label: 'GitHub', value: site.github, url: site.github, external: true },
   { label: 'LinkedIn', value: site.linkedin, url: site.linkedin, external: true },
+  { label: 'Portfolio', value: site.website, url: site.website, external: true },
 ]
 
 function Contact() {
@@ -70,7 +71,7 @@ function Contact() {
                   Get In Touch
                 </a>
                 <a href={site.resume} download className="btn btn-outline-primary">
-                  Download Résumé
+                  Download Resume
                 </a>
               </div>
             </div>
