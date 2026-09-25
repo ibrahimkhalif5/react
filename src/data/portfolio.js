@@ -4,18 +4,22 @@ import najdah from '../assets/najdah.png'
 import revenueSystem from '../assets/revenue-system.png'
 import landRegistry from '../assets/land-registry.png'
 import tenoCare from '../assets/teno-care.png'
+import profile from '../assets/ibrahim.png'
 
 // All the content of the portfolio lives here in one place.
 // The pages import these arrays and render them with .map().
 
 export const site = {
   name: 'Ibrahim Khalif',
+  fullName: 'Ibrahim Khalif Ali',
   role: 'Software Engineer · ICT Professional',
   email: 'ibrahimkhalif5@gmail.com',
   github: 'https://github.com/ibrahimkhalif5',
   linkedin: 'https://www.linkedin.com/in/ibrahim-khalif-367140161',
   resume: '/Ibrahim-Khalif-Ali-Resume.pdf',
 }
+
+export const profileImage = profile
 
 // Quick facts shown in the hero section.
 export const quickFacts = [
@@ -72,6 +76,42 @@ export const interests = [
   'Backend APIs',
   'Database Architecture',
   'Cloud Deployment',
+]
+
+// Services page
+export const servicesIntro =
+  'Services I can deliver based on the work I have done building and supporting production software systems.'
+
+export const services = [
+  {
+    title: 'Web Development',
+    description:
+      'Building government and organizational websites and web applications using PHP, Laravel, Vue.js, HTML, and CSS.',
+  },
+  {
+    title: 'Software Development',
+    description:
+      'Designing, building, and supporting production software systems used by real organizations.',
+  },
+  {
+    title: 'Mobile App Development',
+    description: 'Developing mobile applications using Flutter.',
+  },
+  {
+    title: 'API Development',
+    description:
+      'Designing and integrating REST APIs and third-party payment systems using Laravel and Django REST Framework.',
+  },
+  {
+    title: 'Database Development',
+    description:
+      'Designing and administering MySQL and SQLite databases that serve production applications.',
+  },
+  {
+    title: 'UI/UX Implementation',
+    description:
+      'Building responsive, clean interfaces with HTML, CSS, Bootstrap, and Vue.js.',
+  },
 ]
 
 // Experience
@@ -134,8 +174,10 @@ const skillUrls = {
   Laravel: 'https://laravel.com',
   'Vue.js': 'https://vuejs.org',
   Django: 'https://djangoproject.com',
+  React: 'https://react.dev',
   Flutter: 'https://flutter.dev',
   Bootstrap: 'https://getbootstrap.com',
+  Java: 'https://www.java.com',
   Git: 'https://git-scm.com',
   GitHub: 'https://github.com',
   R: 'https://www.r-project.org',
@@ -147,11 +189,11 @@ const skill = (name) => ({ name, url: skillUrls[name] })
 export const skillGroups = [
   {
     title: 'Languages',
-    skills: ['PHP', 'JavaScript', 'Python', 'SQL', 'HTML', 'CSS'].map(skill),
+    skills: ['PHP', 'JavaScript', 'Java', 'Python', 'SQL', 'HTML', 'CSS'].map(skill),
   },
   {
     title: 'Frameworks',
-    skills: ['Laravel', 'Vue.js', 'Django', 'Flutter', 'Bootstrap'].map(skill),
+    skills: ['Laravel', 'Vue.js', 'React', 'Django', 'Flutter', 'Bootstrap'].map(skill),
   },
   {
     title: 'Databases',
@@ -176,6 +218,11 @@ export const skillGroups = [
 ]
 
 // Projects. Projects without a url have no live link (Teno Care).
+// "role" and "outcome" come from the information already in the portfolio.
+// Teno Care has no stated role/outcome in the portfolio, so it is left out
+// rather than inventing details.
+const role = 'Designed, built, and deployed as part of professional ICT and government work.'
+
 export const projects = [
   {
     name: 'Elwak Municipality Website',
@@ -185,6 +232,9 @@ export const projects = [
       'A municipal government website designed to provide public information and digital access to municipal services and information for the Elwak community.',
     technologies: ['PHP', 'HTML/CSS', 'JavaScript', 'MySQL'],
     url: 'https://elwakmunicipality.co.ke/',
+    role,
+    outcome:
+      'Provides public information and digital access to municipal services for the Elwak community.',
   },
   {
     name: 'Mandera Assembly Website',
@@ -194,6 +244,9 @@ export const projects = [
       'Official web platform for Mandera County Assembly, providing public access to assembly information, proceedings, and governance resources.',
     technologies: ['PHP', 'HTML/CSS', 'JavaScript', 'MySQL'],
     url: 'https://manderaassembly.go.ke/',
+    role,
+    outcome:
+      'Provides public access to assembly information, proceedings, and governance resources.',
   },
   {
     name: 'Najdah Organization Website',
@@ -203,6 +256,9 @@ export const projects = [
       'A multilingual organizational website supporting Arabic, English, and Turkish, built to serve a diverse international audience with content in multiple languages.',
     technologies: ['PHP', 'JavaScript', 'HTML/CSS', 'MySQL'],
     url: 'https://najdah.org/',
+    role,
+    outcome:
+      'Serves a diverse international audience with content in Arabic, English, and Turkish.',
   },
   {
     name: 'Mandera Revenue Collection Management System',
@@ -212,6 +268,9 @@ export const projects = [
       'A revenue management platform used for county revenue operations. Developed and supported as part of county ICT infrastructure, handling payment processing, POS integration, USSD channels, and comprehensive financial reporting.',
     technologies: ['Laravel', 'Vue.js', 'MySQL', 'POS', 'REST APIs', 'Reporting'],
     url: 'https://manderarcms.co.ke/login',
+    role,
+    outcome:
+      'Handles county payment processing, POS integration, USSD channels, and comprehensive financial reporting.',
   },
   {
     name: 'Mandera Land Registry System',
@@ -221,6 +280,8 @@ export const projects = [
       'A land registry management system designed to support land records and related administrative processes. Built to digitize and streamline property registration and ownership tracking.',
     technologies: ['Laravel', 'MySQL', 'PHP', 'JavaScript'],
     url: 'https://manderalrds.co.ke/',
+    role,
+    outcome: 'Digitizes and streamlines property registration and ownership tracking.',
   },
   {
     name: 'Teno Care Hospital System',

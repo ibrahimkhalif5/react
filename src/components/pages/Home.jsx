@@ -26,6 +26,11 @@ const homeCards = [
     blurb: 'Languages, frameworks, databases, APIs, and tools I use to build and run systems.',
   },
   {
+    title: 'Services',
+    path: '/services',
+    blurb: 'What I can deliver — web development, software, APIs, databases, and more.',
+  },
+  {
     title: 'Projects',
     path: '/projects',
     blurb: 'Live production systems I designed, built, and deployed for real organizations.',

@@ -35,6 +35,12 @@ body {
   background-color: var(--dark-bg);
 }
 
+.portfolio-logo {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
 /* ---------- Hero (Home page) ---------- */
 
 .hero-section {
@@ -161,6 +167,20 @@ body {
   margin-top: 1rem;
 }
 
+.profile-image {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.project-detail {
+  margin-bottom: 0.75rem;
+}
+
 .portfolio-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.06);
@@ -183,6 +203,25 @@ body {
 .portfolio-badge-link:hover {
   background: rgba(96, 165, 250, 0.18);
   color: var(--accent);
+}
+
+.skill-icon {
+  vertical-align: -0.15em;
+  margin-right: 0.45rem;
+  color: var(--accent);
+}
+
+.service-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background: rgba(96, 165, 250, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  color: var(--accent);
+  font-size: 1.4rem;
 }
 
 /* ---------- Cards ---------- */
@@ -245,12 +284,18 @@ body {
 
 /* ---------- Resume ---------- */
 
-.resume-frame {
-  width: 100%;
-  min-height: 70vh;
+.resume-document {
+  max-width: 100%;
+  overflow-x: auto;
+  background: #fff;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
-  background: #fff;
+  padding: 1rem;
+}
+
+.resume-document .react-pdf__Page__canvas {
+  display: block;
+  margin: 0 auto;
 }
 
 /* ---------- Contact ---------- */
@@ -275,6 +320,31 @@ body {
 
 .portfolio-social:hover {
   color: var(--accent);
+}
+
+.contact-item {
+  padding: 0.6rem 0;
+}
+
+.contact-item + .contact-item {
+  border-top: 1px solid var(--border);
+}
+
+.portfolio-panel .form-control {
+  background-color: var(--dark-bg);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.portfolio-panel .form-control::placeholder {
+  color: var(--muted);
+}
+
+.portfolio-panel .form-control:focus {
+  background-color: var(--dark-bg);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.25);
+  color: var(--text);
 }
 
 /* ---------- Footer ---------- */

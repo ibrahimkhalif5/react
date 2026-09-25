@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import PageHeader from '../inc/PageHeader'
-import { aboutParagraphs, openTo, currently, interests } from '../../data/portfolio'
+import { site, profileImage, aboutParagraphs, openTo, currently, interests } from '../../data/portfolio'
 
 function About() {
   return (
@@ -29,6 +30,15 @@ function About() {
           </Col>
 
           <Col lg={4}>
+            <div className="portfolio-panel mb-4">
+              <img src={profileImage} alt={site.fullName} className="profile-image mb-3" />
+              <h2 className="h4 mb-1">{site.fullName}</h2>
+              <p className="text-secondary mb-3">{site.role}</p>
+              <Link to="/resume" className="btn btn-primary">
+                View Résumé
+              </Link>
+            </div>
+
             <div className="portfolio-panel mb-4">
               <h3 className="portfolio-panel-title">Currently</h3>
               {currently.map((item, index) => (

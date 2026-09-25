@@ -5,25 +5,27 @@ import { site } from '../../data/portfolio'
 // All page links from one array, rendered with .map().
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Experience', path: '/experience' },
-  { name: 'Education', path: '/education' },
-  { name: 'Skills', path: '/skills' },
+  { name: 'About Me', path: '/about' },
+  { name: 'Services', path: '/services' },
   { name: 'Projects', path: '/projects' },
+  { name: 'Education', path: '/education' },
+  { name: 'Experience', path: '/experience' },
+  { name: 'Skills', path: '/skills' },
   { name: 'Exploring', path: '/exploring' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Contact Me', path: '/contact' },
 ]
 
 function Navbar() {
   return (
-    <BootstrapNavbar expand="lg" bg="dark" variant="dark" sticky="top" className="portfolio-navbar">
+    <BootstrapNavbar expand="xl" bg="dark" variant="dark" sticky="top" className="portfolio-navbar">
       <Container>
-        <BootstrapNavbar.Brand as={Link} to="/">
-          {site.name}
+        <BootstrapNavbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2">
+          <img src="/ib.png" alt={site.name} className="portfolio-logo" />
+          <span>{site.name}</span>
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="main-nav" />
         <BootstrapNavbar.Collapse id="main-nav">
-          <Nav className="ms-auto align-items-lg-center">
+          <Nav className="ms-auto align-items-xl-center">
             {navLinks.map((link) => (
               <Nav.Link
                 key={link.name}
@@ -34,12 +36,6 @@ function Navbar() {
                 {link.name}
               </Nav.Link>
             ))}
-            <Link
-              to="/resume"
-              className="btn btn-outline-light btn-sm portfolio-resume-btn ms-lg-3"
-            >
-              Résumé
-            </Link>
           </Nav>
         </BootstrapNavbar.Collapse>
       </Container>

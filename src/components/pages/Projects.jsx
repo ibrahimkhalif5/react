@@ -18,6 +18,19 @@ function Projects() {
                   <h2 className="h5">{project.name}</h2>
                   <p className="text-secondary small flex-grow-1">{project.description}</p>
 
+                  {project.role && (
+                    <div className="project-detail">
+                      <p className="portfolio-panel-label mb-1">My Role</p>
+                      <p className="small mb-0">{project.role}</p>
+                    </div>
+                  )}
+                  {project.outcome && (
+                    <div className="project-detail">
+                      <p className="portfolio-panel-label mb-1">Outcome</p>
+                      <p className="small mb-0">{project.outcome}</p>
+                    </div>
+                  )}
+
                   <div className="d-flex flex-wrap gap-2 mb-3">
                     {project.technologies.map((tech) => (
                       <span className="portfolio-badge" key={tech}>

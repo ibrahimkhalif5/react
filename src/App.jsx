@@ -8,6 +8,7 @@ import Experience from './components/pages/Experience'
 import Education from './components/pages/Education'
 import Skills from './components/pages/Skills'
 import Projects from './components/pages/Projects'
+import Services from './components/pages/Services'
 import Exploring from './components/pages/Exploring'
 import Contact from './components/pages/Contact'
 import Resume from './components/pages/Resume'
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/education" element={<Education />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
